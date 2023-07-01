@@ -554,9 +554,9 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "434e6fdc79a81d1a2a0877339ae29004c0f32734"
-      resolved-ref: "434e6fdc79a81d1a2a0877339ae29004c0f32734"
-      url: "https://github.com/boyan01/flutter-music-player.git"
+      ref: "831658da12dd2726a8e357d78e28a5671ff573b9"
+      resolved-ref: "831658da12dd2s726a8e357d78e28a5671ff573b9"
+      url: "https://github.com/damajiang90/flutter-music-player.git"
     source: git
     version: "0.0.1"
   netease_api:
