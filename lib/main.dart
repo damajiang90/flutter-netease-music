@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:mixin_logger/mixin_logger.dart';
@@ -20,6 +21,7 @@ import 'repository.dart';
 import 'repository/app_dir.dart';
 import 'utils/cache/cached_image.dart';
 import 'utils/callback_window_listener.dart';
+import 'utils/display_mode_util.dart';
 import 'utils/hive/duration_adapter.dart';
 import 'utils/platform_configuration.dart';
 import 'utils/system/system_fonts.dart';
@@ -34,6 +36,9 @@ void main() async {
   await initLogger(p.join(appDir.path, 'logs'));
   registerImageCacheProvider();
   await _initHive();
+  SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+    DisplayModeUtil.initDisplay();
+  });
   FlutterError.onError = (details) => e('flutter error: $details');
   PlatformDispatcher.instance.onError = (error, stacktrace) {
     e('uncaught error: $error $stacktrace');

@@ -14,7 +14,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^1.0.3
-  json_annotation: ^4.3.0
+  json_annotation: ^4.8.0
   dio_cookie_manager: ^2.1.4
   path_provider: ^2.0.2
   shared_preferences: ^2.1.0
@@ -30,7 +30,11 @@ dependencies:
   music_player:
     git:
       url: https://github.com/damajiang90/flutter-music-player.git
-      ref: 831658da12dd2726a8e357d78e28a5671ff573b9
+      ref: master
+  flutter_displaymode:
+    git:
+      url: https://github.com/ajinasokan/flutter_displaymode.git
+      ref: e3feeff
   scrollable_positioned_list: ^0.3.5
   hive: ^2.2.3
   hive_flutter: ^1.1.0
